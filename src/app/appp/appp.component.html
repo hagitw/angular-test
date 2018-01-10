@@ -1,0 +1,28 @@
+<p>
+  appp works!
+</p>
+
+<input type="text" value="inputv" name="inputv"  [(ngModel)]="inputv" >
+
+<table *ngIf="!ShowForm">
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Image</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let item of arrjson | filter : inputv ;let i = index  ">
+      <td>{{item.Name}}</td>
+      <td>{{item.Address}}</td>
+      <td>{{item["Phone Number"]}}</td>
+      <td>
+        <img src='{{item["Url Image"]}}' />
+      </td>
+      <th (click)="EditItem(item)">Edit</th>
+      <th (click)="DeleteItem(i)">Delete</th>
+    </tr>
+  </table>
+
+<edit *ngIf="ShowForm" (onClickAdd)="onClickAddHandler($event)" [EditItem]="Item"></edit>

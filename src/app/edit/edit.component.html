@@ -1,0 +1,36 @@
+
+ <h1>edit works!</h1> 
+  <form>
+
+    <p class="h5 text-center mb-4">Write to us</p>
+
+    <div class="md-form">
+      <i class="fa fa-user prefix grey-text"></i>
+      <input type="text" id="form3" class="form-control" value="Name" name="name"  [(ngModel)]="Name">
+      <label for="form3">Name</label>
+    </div>
+
+    <div class="md-form">
+      <i class="fa fa-envelope prefix grey-text"></i>
+      <input type="text" id="form2" class="form-control" value="Address"  name="address"  [(ngModel)]="Address">
+      <label for="form2">Address</label>
+    </div>
+
+    <div class="md-form">
+      <i class="fa fa-tag prefix grey-text"></i>
+      <input type="text" id="form32" class="form-control" value="Phone" name="phone" [(ngModel)]="Phone">
+      <label for="form34">Phone</label>
+    </div>
+
+    <div class="md-form">
+      <i class="fa fa-pencil prefix grey-text"></i>
+      <input type="text" id="form8" class="form-control" value="Url"  name="url" [(ngModel)]="Url">
+      <label for="form8">Url Image</label>
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-unique" (click)="SaveEdit()">Send<i class="fa fa-paper-plane-o ml-1"></i>
+      </button>
+    </div>
+
+  </form>
